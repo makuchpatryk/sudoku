@@ -2,6 +2,7 @@
 const nextConfig = {
   basePath: '/sudoku',
   reactStrictMode: true,
+  distDir: 'out',
   experimental: {
     appDir: true,
   },
