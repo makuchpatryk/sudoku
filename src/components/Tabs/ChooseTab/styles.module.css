@@ -1,0 +1,36 @@
+.chooseName {
+    width: 500px;
+}
+.level {
+    display:block;
+    margin-bottom:10px;
+}
+.select {
+    vertical-align:top;
+    width: 100%;
+    border: 1px solid #767676;
+    border-radius: 2px;
+    padding: 6px;
+    background-color: white;
+    text-transform: capitalize;
+}
+.select:focus {
+    outline:none;
+}
+.name {
+    display:block;
+    margin-bottom:10px;
+}
+.label {
+    color:#777;
+    display:block;
+    font-size:13px;
+}
+.input {
+    padding:6px;
+    vertical-align:top;
+    width: 100%;
+}
+.input:focus {
+    outline:none;
+}

@@ -1,0 +1,8 @@
+.timer {
+    font-size: 40px;
+    width: 200px;
+    text-align: right;
+}
+.digits {
+    width: 100px;
+}

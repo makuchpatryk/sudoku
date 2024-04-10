@@ -1,0 +1,9 @@
+.ul {
+    display:block;
+    width:100%;
+    margin:0
+}
+
+.ul:nth-child(3), .ul:nth-child(6){
+  border-bottom:2px solid black
+}

@@ -1,0 +1,18 @@
+.navbar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.trials {
+    display:block;
+    font-size:30px
+}
+.num {
+    font-weight:800;
+}
+.rightColumn {
+    text-align: right;
+}

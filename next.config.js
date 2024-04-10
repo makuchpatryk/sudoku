@@ -3,6 +3,10 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  compiler: {
+    styledComponents: true
+  },
+  output: 'standalone',
 }
 
 module.exports = nextConfig

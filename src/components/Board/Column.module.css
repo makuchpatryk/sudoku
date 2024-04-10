@@ -1,0 +1,71 @@
+.active {
+  background-color: rgb(58, 255, 58);
+}
+
+.element {
+    position:absolute;
+    top:50%;
+    left:50%;
+    font-weight:600;
+    transform:translate(-50%, -50%);
+    font-size:17px
+}
+.input {
+  background:none;
+  width:100%;
+  height:70px;
+  text-align:center;
+  color:red;
+  font-weight:600;
+  border: 1px solid darkgrey;
+  caret-color: transparent;
+}
+.input::-webkit-inner-spin-button, 
+.input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input:focus{
+  outline:none;
+  background:rgba(150,150,150,0.5)
+}
+
+.li{
+  display:inline-block;
+  width:11.11111%;
+  position:relative
+}
+.li:nth-child(3), .li:nth-child(6) {
+  border-right:2px solid black;
+}
+
+
+.pencialRow:nth-child(3), .pencialRow:nth-child(6){
+  border-bottom:none
+}
+.pencialRow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  height: 100%;
+  pointer-events: none;
+  padding: 5px;
+  background: none;
+  color: #777;
+  display: grid;
+  list-style: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+
+  .pencialLi {
+      font-size:17px;
+      border: none !important;
+      text-align: center;
+      width: 100%;
+  }
+  .pencialLi:nth-child(3), .pencialLi:nth-child(6){
+    border-right:none
+  }
+}

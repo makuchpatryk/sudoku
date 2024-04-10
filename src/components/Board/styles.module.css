@@ -1,0 +1,12 @@
+.lists {
+    width:620px;
+    display:block;
+    margin:auto;
+    z-index:1;
+    position:relative
+}
+@media (max-width: 1200px){
+    .lists{
+        width:100%
+    }
+}

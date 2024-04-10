@@ -105,3 +105,16 @@ a {
     color-scheme: dark;
   }
 }
+
+.btn {
+  outline: none;
+  appearance: none;
+  border: none;
+  background-color: #8261ee;
+  border-radius: 3px;
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+}
