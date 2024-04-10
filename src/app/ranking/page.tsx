@@ -78,12 +78,11 @@ export default async function Ranking() {
 }
 
 async function getData() {
-  const prisma = new PrismaClient();
-  const ranking = await prisma.ranking.findMany({
-    orderBy: {
-      finishTime: "desc",
-    },
-  });
-
-  return ranking;
+  //   const prisma = new PrismaClient();
+  //   const ranking = await prisma.ranking.findMany({
+  //     orderBy: {
+  //       finishTime: "desc",
+  //     },
+  //   });
+  //   return ranking;
 }
