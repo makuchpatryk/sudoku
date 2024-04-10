@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '/sudoku',
+  reactStrictMode,
   experimental: {
     appDir: true,
   },
@@ -8,5 +10,5 @@ const nextConfig = {
   },
   output: 'standalone',
 }
-
-module.exports = nextConfig
+ 
+export default nextConfig
