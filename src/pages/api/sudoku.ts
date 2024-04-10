@@ -1,12 +1,11 @@
 import { NextApiHandler } from 'next'
-import { PrismaClient } from '@prisma/client'
+// import { PrismaClient } from '@prisma/client'
 
 import Sudoku from '@/utils/sudoku.class';
 import { LEVELS } from '@/defaults';
 
 const handler: NextApiHandler = async (req, res) => {
-    const prisma = new PrismaClient()
-
+    // const prisma = new PrismaClient()
     try {
         const level: string = (req.query.level || LEVELS.EASY) as string;
         const sudoku = new Sudoku(level);
