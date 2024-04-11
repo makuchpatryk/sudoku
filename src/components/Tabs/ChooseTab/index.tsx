@@ -4,45 +4,52 @@ import styles from "./styles.module.css";
 
 import { useContext } from "react";
 
-import { LEVELS } from "@/defaults";
+import { DEFAULT_BOARD, LEVELS } from "@/defaults";
+import { useRouter } from "next/router";
+import { Input, MenuItem, Select } from "@mui/material";
 
-type TypeProps = {
-  handleStartGame: React.MouseEventHandler<HTMLButtonElement>;
-};
+const ChooseTab = () => {
+  const { setName, name, level, setLevel, setBoard, setCorrectedBoard } =
+    useContext(Context);
+  const router = useRouter();
 
-export default function ChooseTab({ handleStartGame }: TypeProps) {
-  const { setName, level, setLevel } = useContext(Context);
+  const handleStartGame = () => {
+    router.push(`/game?level=${level}&name=${name}`);
+    setBoard(DEFAULT_BOARD);
+    setCorrectedBoard(DEFAULT_BOARD);
+  };
 
   return (
     <>
       <div className={styles.chooseName}>
         <div className={styles.name}>
           <label className={styles.label}>Name:</label>
-          <input
+          <Input
             className={styles.input}
             type="text"
-            maxLength={100}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div className={styles.level}>
           <label className={styles.label}>Level:</label>
-          <select
+          <Select
             className={styles.select}
             defaultValue={LEVELS.EASY}
             onChange={(e) => setLevel(e.target.value)}
           >
             {Object.values(LEVELS).map((item, key) => {
               return (
-                <option key={key} value={item}>
+                <MenuItem key={key} value={item}>
                   {item}
-                </option>
+                </MenuItem>
               );
             })}
-          </select>
+          </Select>
         </div>
         <StartGameButton handleClick={handleStartGame} />
       </div>
     </>
   );
-}
+};
+
+export default ChooseTab;

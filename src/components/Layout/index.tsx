@@ -1,8 +1,10 @@
 import "@/app/globals.css";
 import { Provider } from "@/context/Provider";
+import { Typography } from "@mui/material";
+import { Metadata } from "next";
 import { Roboto } from "next/font/google";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "SUDOKU",
   description: "Play sudoku!!",
 };
@@ -14,14 +16,12 @@ const roboto = Roboto({
   display: "swap",
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-      <h1>SUDOKU</h1>
+      <Typography variant="h3" component="h4">
+        SUDOKU
+      </Typography>
       <Provider>
         <main className={`${roboto.className} sudoku`}>
           <div className="wrapper">{children}</div>
@@ -29,4 +29,6 @@ export default function RootLayout({
       </Provider>
     </div>
   );
-}
+};
+
+export default RootLayout;

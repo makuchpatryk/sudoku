@@ -6,16 +6,10 @@
     margin-bottom:10px;
 }
 .select {
-    vertical-align:top;
     width: 100%;
-    border: 1px solid #767676;
-    border-radius: 2px;
-    padding: 6px;
-    background-color: white;
-    text-transform: capitalize;
+    margin-top: 10px;
 }
 .select:focus {
-    outline:none;
 }
 .name {
     display:block;
@@ -27,8 +21,7 @@
     font-size:13px;
 }
 .input {
-    padding:6px;
-    vertical-align:top;
+    margin-top: 10px;
     width: 100%;
 }
 .input:focus {
