@@ -68,7 +68,7 @@ const Page = () => {
         level: level,
         finishTime: finishTime,
       };
-      await fetch("/api/ranking", {
+      await fetch("/sudoku/api/ranking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
@@ -88,7 +88,7 @@ const Page = () => {
 
     try {
       const response = await fetch(
-        `/api/sudoku?${new URLSearchParams({
+        `/sudoku/api/sudoku?${new URLSearchParams({
           level,
         })}`,
         {

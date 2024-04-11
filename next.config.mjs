@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/sudoku',
+  basePath: '/sudoku/',
   reactStrictMode: true,
   distDir: 'out',
   compiler: {
