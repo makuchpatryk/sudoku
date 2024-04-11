@@ -1,13 +1,8 @@
 import "@/app/globals.css";
 import { Provider } from "@/context/Provider";
 import { Typography } from "@mui/material";
-import { Metadata } from "next";
 import { Roboto } from "next/font/google";
-
-export const metadata: Metadata = {
-  title: "SUDOKU",
-  description: "Play sudoku!!",
-};
+import Head from "next/head";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -19,6 +14,11 @@ const roboto = Roboto({
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
+      <Head>
+        <title>Sudoku</title>
+        <meta name="description" content="sudoku" />\
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
       <Typography variant="h3" component="h4">
         SUDOKU
       </Typography>
