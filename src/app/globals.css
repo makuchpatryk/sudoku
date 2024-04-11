@@ -118,3 +118,16 @@ a {
   display: inline-block;
   margin: 0 5px;
 }
+
+.sudoku{
+  padding:0 15px;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}

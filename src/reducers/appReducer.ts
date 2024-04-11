@@ -51,6 +51,7 @@ export const appReducer: Reducer<IState, IAction> = (state, action) => {
 
     switch (type) {
         case ActionKind.SET_STATUS: {
+            console.log('setStatus', payload);
             return {
                 ...state,
                 status: payload,

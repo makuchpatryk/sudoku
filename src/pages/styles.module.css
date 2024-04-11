@@ -1,0 +1,8 @@
+.game {
+    position: relative;
+}
+
+.gameContainer {
+    position: relative;
+    display: block;
+}

@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { ReactElement, useRef } from "react";
 import { Modal, Box } from "@mui/material";
 
 import Board from "@/components/Board";
@@ -16,8 +16,9 @@ import Context from "@/context/Provider";
 import { CountdownHandle } from "@/components/Stopwatch";
 
 import { useContext } from "react";
+import RootLayout from "@/components/Layout";
 
-export default function Home() {
+const Page = () => {
   const timeRef = useRef<CountdownHandle>(null);
   const {
     name,
@@ -123,6 +124,7 @@ export default function Home() {
 
   return (
     <>
+      {status}
       {status === STATUSES.WAITING && (
         <ChooseTab handleStartGame={handleStartGame} />
       )}
@@ -143,4 +145,10 @@ export default function Home() {
       </Modal>
     </>
   );
-}
+};
+
+Page.getLayout = function getLayout(page: ReactElement) {
+  return <RootLayout>{page}</RootLayout>;
+};
+
+export default Page;
