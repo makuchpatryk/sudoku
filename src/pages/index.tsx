@@ -68,7 +68,7 @@ const Page = () => {
         level: level,
         finishTime: finishTime,
       };
-      await fetch("/sudoku/api/ranking", {
+      await fetch("/api/ranking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
@@ -88,7 +88,7 @@ const Page = () => {
 
     try {
       const response = await fetch(
-        `/sudoku/api/sudoku?${new URLSearchParams({
+        `/api/sudoku?${new URLSearchParams({
           level,
         })}`,
         {
@@ -124,7 +124,6 @@ const Page = () => {
 
   return (
     <>
-      {status}
       {status === STATUSES.WAITING && (
         <ChooseTab handleStartGame={handleStartGame} />
       )}
