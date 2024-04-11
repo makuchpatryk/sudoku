@@ -13,7 +13,7 @@ import RootLayout from "@/components/Layout";
 import useBoard from "@/hooks/useBoard";
 import { useRouter } from "next/router";
 import Sudoku from "@/utils/sudoku.class";
-import { DEFAULT_BOARD } from "@/defaults";
+import { DEFAULT_BOARD, TRIALS } from "@/defaults";
 
 const Page = () => {
   const {
@@ -27,6 +27,7 @@ const Page = () => {
     modalBody,
     setBoard,
     setCorrectedBoard,
+    setTrials,
   } = useBoard();
   const [refresh, setRefresh] = useState(false);
 
@@ -43,6 +44,7 @@ const Page = () => {
   const handleStartGame = () => {
     setBoard(DEFAULT_BOARD);
     setCorrectedBoard(DEFAULT_BOARD);
+    setTrials(TRIALS);
 
     router.push(`/game?level=${level}&name=${name}`);
     setRefresh(!refresh);
@@ -51,6 +53,7 @@ const Page = () => {
   const handleBackToHome = () => {
     setBoard(DEFAULT_BOARD);
     setCorrectedBoard(DEFAULT_BOARD);
+    setTrials(TRIALS);
 
     router.push("/");
   };
@@ -66,7 +69,13 @@ const Page = () => {
         </span>
       </div>
 
-      <Modal open={openModal} onClose={closingModalHandle}>
+      <Modal
+        open={openModal}
+        onClose={() => {
+          router.push("/");
+          closingModalHandle();
+        }}
+      >
         {modalBody || <></>}
       </Modal>
     </>

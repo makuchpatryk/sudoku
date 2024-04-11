@@ -51,7 +51,6 @@ const useBoard = () => {
     await submitResults(finishTime);
   };
   const lost = () => {
-    setTrials(TRIALS);
     setOpenModal(true);
     timeRef.current?.stop();
 
@@ -85,6 +84,7 @@ const useBoard = () => {
 
     setBoard(DEFAULT_BOARD);
     setCorrectedBoard(DEFAULT_BOARD);
+    setTrials(TRIALS);
   };
 
   return {
