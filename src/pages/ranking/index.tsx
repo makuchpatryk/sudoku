@@ -1,11 +1,14 @@
 // import { PrismaClient } from "@prisma/client";
 
+import RootLayout from "@/components/Layout";
+import { ReactElement } from "react";
+
 // import { LEVELS } from "@/defaults";
 // import formatTime from "@/utils/time-formatter";
 
 // import styles from "./styles.module.css";
 
-export default async function Ranking() {
+const Ranking = () => {
   return <div></div>;
   //   const ranking = await getData();
 
@@ -76,7 +79,7 @@ export default async function Ranking() {
   //       </div>
   //     </div>
   //   );
-}
+};
 
 async function getData() {
   //   const prisma = new PrismaClient();
@@ -87,3 +90,9 @@ async function getData() {
   //   });
   //   return ranking;
 }
+
+Ranking.getLayout = function getLayout(page: ReactElement) {
+  return <RootLayout>{page}</RootLayout>;
+};
+
+export default Ranking;
