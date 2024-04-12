@@ -5,8 +5,7 @@ const nextConfig = {
   distDir: 'out',
   compiler: {
     styledComponents: true
-  },
-  output: 'standalone',
+  }
 }
  
 export default nextConfig

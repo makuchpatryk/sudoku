@@ -6,7 +6,7 @@ import { useContext, useState } from "react";
 
 import { DEFAULT_BOARD, LEVELS, TRIALS } from "@/defaults";
 import { useRouter } from "next/router";
-import { TextField, MenuItem, Select } from "@mui/material";
+import { TextField, MenuItem, Select, InputLabel } from "@mui/material";
 
 const ChooseTab = () => {
   const {
@@ -61,7 +61,6 @@ const ChooseTab = () => {
         </div>
         <div className={styles.level}>
           <Select
-            label="Level"
             className={styles.select}
             defaultValue={LEVELS.EASY}
             onChange={(e) => setLevel(e.target.value)}

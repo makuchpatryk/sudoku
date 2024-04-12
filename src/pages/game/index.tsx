@@ -37,6 +37,7 @@ const Page = () => {
 
     setBoard(hide);
     setCorrectedBoard(board);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refresh]);
 
   const router = useRouter();

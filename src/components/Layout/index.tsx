@@ -1,4 +1,3 @@
-import "@/app/globals.css";
 import { Provider } from "@/context/Provider";
 import { Typography } from "@mui/material";
 import { Roboto } from "next/font/google";

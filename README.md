@@ -1,38 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sudoku Game Application Readme
 
-## Getting Started
+Welcome to the Sudoku Game Application! This web-based game is built using Next.js framework to provide a seamless and interactive experience for Sudoku enthusiasts.
 
-First, run the development server:
+## Features:
+
+**Interactive Sudoku Board:** Enjoy a user-friendly interface with a dynamic Sudoku board where you can easily input numbers and navigate through cells.
+
+**Multiple Difficulty Levels:** Challenge yourself with various difficulty levels ranging from easy to hard. Whether you're a beginner or an expert, there's a puzzle for everyone.
+
+**Validation:** Receive instant feedback on your moves with built-in validation. Ensure accuracy as you progress through the game.
+
+**Timer:** Keep track of your solving time with an integrated timer. Compete against yourself or challenge friends to beat your best times.
+
+## Getting Started:
+
+To run the Sudoku Game Application locally, follow these steps:
+
+1. Clone the repository to your local machine:
+
+```bash
+git clone git@github.com:makuchpatryk/sudoku.git
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit http://localhost:3000 to access the Sudoku game application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+To deploy the Sudoku Game Application, you can follow the deployment instructions for Next.js applications. Here's a basic outline:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Build the project:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run build
+```
 
-## Learn More
+Deploy the built project to your preferred hosting platform. You can use services like Vercel, Netlify, or deploy it manually to your server.
 
-To learn more about Next.js, take a look at the following resources:
+Ensure that the environment is properly configured, especially if you're using services like Firebase for authentication or saving game data.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Contributions to the Sudoku Game Application are welcome! If you have suggestions for new features, improvements, or find any bugs, feel free to open an issue or submit a pull request.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Enjoy playing Sudoku! If you have any questions or feedback, don't hesitate to reach out.
