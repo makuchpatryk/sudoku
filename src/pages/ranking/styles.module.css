@@ -12,7 +12,7 @@
     display:inline-block;
 
     .title {
-        color:#ddd;
+        color: var(--sudoku-text);
         font-size:24px;
         font-weight:600;
         display:block;
@@ -66,14 +66,17 @@
         }
 
         .li:nth-of-type(2){
-            background-color:red;
+            background-color: var(--rank-gold);
             margin-bottom:15px;
+            color: #000;
         }
         .li:nth-of-type(3){
-            background-color:lime;
+            background-color: var(--rank-silver);
+            color: #000;
         }
         .li:nth-of-type(4){
-            background-color:#ff0;
+            background-color: var(--rank-bronze);
+            color: #fff;
         }
     }
 }
